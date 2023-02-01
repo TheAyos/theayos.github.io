@@ -1,0 +1,158 @@
+@import "base.css";
+@import "nav.css";
+@import "pages.css";
+@import "gallery.css";
+@import "contact.css";
+@import "fancy-scrollbar.css";
+
+:root {
+    --nav-height: 85px;
+    --about-pages-count: 4;
+    --color-blue: #52c8e8;
+    --color-orange: #f17a22;
+    --color-green: #5bef11;
+    --color-magenta: #fa1497;
+    --color-select: #ffc7b8;
+    --scrollbar-width: 11px;
+    --banner_video_blur: 4px;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.banner h1 {
+    margin-top: 50px;
+    display: inline-block;
+    font-size: 3.5rem;
+    /* font-weight: 600; */
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+    color: #fff;
+    text-shadow: 3px 5px 0 rgba(0, 0, 0, 0.3);
+    /* text-shadow: 0.07em 0 3px #cea800, 0 0.07em 3px #cea800, -0.07em 0 3px #cea800, 0 -0.07em 3px #cea800; */
+    border-bottom: 4px dashed var(--color-orange);
+}
+.banner h1 span {
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-family: "Great Vibes", sans-serif;
+    line-height: 3.5rem;
+    /* background-color: rgba(255, 173, 79, 0.699); */
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.banner button {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #8a2be2;
+    outline: none;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.banner p {
+    margin: 3rem;
+    padding: 0.5rem 1rem;
+    width: 80%;
+    border: 6px dotted var(--color-select);
+    font-size: 1rem;
+    line-height: 2rem;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.39);
+    word-spacing: 2px;
+    text-align: justify;
+    border-radius: 20px;
+}
+.banner div.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .banner div.backdrop {
+        -webkit-backdrop-filter: blur(var(--banner_video_blur));
+        backdrop-filter: blur(var(--banner_video_blur));
+    }
+}
+.banner video {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    z-index: -100;
+    box-shadow: none;
+    outline: none;
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+}
+
+footer {
+    display: flex;
+    height: 100vh;
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .banner video {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    .banner video {
+        width: auto;
+        height: 100%;
+    }
+}
+@media (max-width: 700px) {
+    .banner {
+        background-image: url("assets/tousreunis.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+@media (max-width: 700px) {
+    .banner video {
+        display: none;
+    }
+}
+/* @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .banner video {
+        top: calc(-2 * var(--banner_video_blur));
+        left: calc(-2 * var(--banner_video_blur));
+        width: calc(100% + 4 * var(--banner_video_blur));
+        height: calc(100% + 4 * var(--banner_video_blur));
+        -webkit-filter: blur(var(--banner_video_blur));
+        filter: blur(var(--banner_video_blur));
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+} */

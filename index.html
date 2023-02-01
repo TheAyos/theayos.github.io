@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kinderhilfe - Aide humanitaire aux orphelins</title>
+
+        <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!-- <div class="scrollbar-track" id="scrollbar-track"></div>
+        <div class="scrollbar-thumb" id="scrollbar-thumb"></div> -->
+
+        <div class="nav__container">
+            <div class="logo__container responsive__special__placement">
+                <img src="assets/logo.png" alt="Kinderhilfe Logo" />
+                <a class="name" href="index.html">Kinderhilfe</a>
+            </div>
+
+            <a class="nav__links" href="#home">Accueil</a>
+            <a class="nav__links" href="#about">Qui sommes-nous ?</a>
+            <a class="nav__links" href="#help">Nos actions</a>
+            <a class="nav__links" href="#help">Aider</a>
+            <a class="nav__links" href="#gallery">Galerie</a>
+
+            <div class="icon__container responsive__special__placement">
+                <a class="nav__links cta responsive__special__placement" href="#contact"><button>Contact</button></a>
+                <a href="javascript:void(0);" class="nav__links icon responsive__special__placement" onclick="navFx()"><i class="fa fa-bars"></i></a>
+            </div>
+        </div>
+
+        <header id="home">
+            <div class="banner">
+                <div class="backdrop"></div>
+                <video preload="auto" autoplay="true" loop="true" muted="muted" volume="0" poster="assets/poster.jpg" id="video_loop">
+                    <source src="assets/banner_loop.mp4" type="video/mp4" />
+                    <source src="assets/banner_loop.webm" type="video/webm" />
+                </video>
+
+                <h1><span>Kinderhilfe</span>, un projet caritatif</h1>
+                <p>
+                    Dans le cadre de l'atelier Kinderhilfe, le Lycée Lyautey est impliqué depuis 2016 dans un projet caritatif au profit de l'orphelinat de garçons Dar Al Atfal de Sidi Bernoussi, géré
+                    par l'Association de Bienfaisance de Sidi Bernoussi, qui compte près de 300 pensionnaires âgés de 14 à 35 ans. Il s'agit pour la plupart d'entre eux d'enfants abandonnés. L'atelier
+                    s'inscrit dans l'éthique éducative du Lycée Lyautey qui accorde une place importante à l'éducation à la citoyenneté des élèves et à la promotion de leur engagement social et
+                    humanitaire. Cet atelier regroupe, sous la responsabilité de Pascale Chaumond, professeur d'allemand, une cinquantaine d'élèves lycéens, qui s'impliquent dans des actions
+                    citoyennes et solidaires visant à améliorer les conditions de vie des orphelins de Bernoussi. Ces projets ne pourraient voir le jour sans le soutien de nombreux partenaires
+                    économiques et parents d'élèves.
+                </p>
+                <div class="slider">
+                    <div class="slide-track-1">
+                        <div class="slide">
+                            <img src="/path/to/image1.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="/path/to/image2.png" alt="" />
+                        </div>
+
+                        <div class="slide">
+                            <img src="/path/to/image1.png" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="/path/to/image2.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="about">
+            <div class="grid__title"><h1>Qui sommes-nous ?</h1></div>
+
+            <div class="grid__pages">
+                <div class="grid__page">
+                    <h2>Tout d'abord: Le Projet</h2>
+                    <img src="assets/khilfe_bernoussi_2.png" alt="Kinderhilfe logo" />
+                    <p>
+                        "Kinderhilfe" est un projet de solidarité internationale lancé par des élèves du Lycée Lyautey en France, pour soutenir les orphelins et les enfants défavorisés de l'orphelinat
+                        Dar Al Atfal à Casablanca, au Maroc. Le but principal de ce projet est de collecter des fonds et des dons pour aider l'orphelinat à couvrir ses besoins de base, tels que la
+                        nourriture, les médicaments et les salaires des employés. Les élèves du Lycée Lyautey s'engagent également à organiser des activités pour améliorer les conditions de vie des
+                        enfants et des jeunes adultes accueillis à l'orphelinat. Cela peut inclure des visites régulières pour organiser des activités de loisirs, des ateliers d'éducation ou des
+                        projets de rénovation de l'infrastructure de l'orphelinat. En outre, ce projet permet aux élèves de découvrir les réalités de l'engagement social à travers l'action concrète et
+                        de développer leur sens de la responsabilité et de la citoyenneté. Rejoignez-nous dans cette belle initiative et aidez-nous à faire une différence significative dans la vie des
+                        enfants à l'orphelinat Dar Al Atfal.
+                    </p>
+                </div>
+                <div class="grid__page">
+                    <h2>Un Engagement sans faille</h2>
+                    <p>
+                        Le projet Kinderhilfe du Lycée Lyautey s'engage <span>depuis 2015</span> à améliorer les conditions de vie des enfants à l'orphelinat Dar Al Atfal à Casablanca. Grâce à
+                        l'engagement de nos élèves et à la générosité de nos donateurs, nous avons réalisé de nombreux projets au cours des années passées. Nous avons créé une bibliothèque et un
+                        espace de jeux pour les pensionnaires de l'orphelinat, organisé des après-midis récréatives pour les enfants, contribué à la rénovation des locaux de l'orphelinat et au
+                        renouvellement de l'équipement. Nous avons également développé et géré la bibliothèque en embauchant un bibliothécaire à mi-temps et en acquérant de nouveaux livres en arabe et
+                        en français pour élargir le choix des lectures pour les pensionnaires.
+                    </p>
+                </div>
+                <div class="grid__page">
+                    <h2>Quoi d'autre ?</h2>
+                    <p>
+                        (TODO: mettre sous forme de liste les énumérations)
+                        <br />
+                        D'autres actions ont également été menées telles que l'aménagement d'une salle informatique, l'aide à l'insertion professionnelle, l'accompagnement des bacheliers pour leur
+                        orientation après leur bac, les entraînements de football, les rénovations et la mise en place d'un dispositif d'orientation. Dans l'avenir, l'association poursuivra ses
+                        efforts pour améliorer les conditions de vie des enfants à l'orphelinat Dar Al Atfal en mettant en place de nouveaux projets pour amener les orphelinats à poursuivre un
+                        meilleur avenir
+                    </p>
+                </div>
+                <div class="grid__page">
+                    <h2>"L'équipe" 2021/2022</h2>
+                    <img src="assets/khilfe_bernoussi_2.png" alt="Kinderhilfe logo" />
+                    <p>(TODO:insérer photo groupe !)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="help" id="about">
+            <div class="grid__title"><h1>Nos actions</h1></div>
+
+            <div class="grid__pages">
+                <div class="grid__page">
+                    <h2>Tout d'abord: Le Projet</h2>
+                    <img src="assets/khilfe_bernoussi_2.png" alt="Kinderhilfe logo" />
+                    <p>
+                        "Kinderhilfe" est un projet de solidarité internationale lancé par des élèves du Lycée Lyautey en France, pour soutenir les orphelins et les enfants défavorisés de l'orphelinat
+                        Dar Al Atfal à Casablanca, au Maroc. Le but principal de ce projet est de collecter des fonds et des dons pour aider l'orphelinat à couvrir ses besoins de base, tels que la
+                        nourriture, les médicaments et les salaires des employés. Les élèves du Lycée Lyautey s'engagent également à organiser des activités pour améliorer les conditions de vie des
+                        enfants et des jeunes adultes accueillis à l'orphelinat. Cela peut inclure des visites régulières pour organiser des activités de loisirs, des ateliers d'éducation ou des
+                        projets de rénovation de l'infrastructure de l'orphelinat. En outre, ce projet permet aux élèves de découvrir les réalités de l'engagement social à travers l'action concrète et
+                        de développer leur sens de la responsabilité et de la citoyenneté. Rejoignez-nous dans cette belle initiative et aidez-nous à faire une différence significative dans la vie des
+                        enfants à l'orphelinat Dar Al Atfal.
+                    </p>
+                </div>
+                <div class="grid__page">
+                    <h2>Un Engagement sans faille</h2>
+                    <p>
+                        Le projet Kinderhilfe du Lycée Lyautey s'engage <span>depuis 2015</span> à améliorer les conditions de vie des enfants à l'orphelinat Dar Al Atfal à Casablanca. Grâce à
+                        l'engagement de nos élèves et à la générosité de nos donateurs, nous avons réalisé de nombreux projets au cours des années passées. Nous avons créé une bibliothèque et un
+                        espace de jeux pour les pensionnaires de l'orphelinat, organisé des après-midis récréatives pour les enfants, contribué à la rénovation des locaux de l'orphelinat et au
+                        renouvellement de l'équipement. Nous avons également développé et géré la bibliothèque en embauchant un bibliothécaire à mi-temps et en acquérant de nouveaux livres en arabe et
+                        en français pour élargir le choix des lectures pour les pensionnaires.
+                    </p>
+                </div>
+                <div class="grid__page">
+                    <h2>Quoi d'autre ?</h2>
+                    <p>
+                        (TODO: mettre sous forme de liste les énumérations)
+                        <br />
+                        D'autres actions ont également été menées telles que l'aménagement d'une salle informatique, l'aide à l'insertion professionnelle, l'accompagnement des bacheliers pour leur
+                        orientation après leur bac, les entraînements de football, les rénovations et la mise en place d'un dispositif d'orientation. Dans l'avenir, l'association poursuivra ses
+                        efforts pour améliorer les conditions de vie des enfants à l'orphelinat Dar Al Atfal en mettant en place de nouveaux projets pour amener les orphelinats à poursuivre un
+                        meilleur avenir
+                    </p>
+                </div>
+                <div class="grid__page">
+                    <h2>"L'équipe" 2021/2022</h2>
+                    <img src="assets/khilfe_bernoussi_2.png" alt="Kinderhilfe logo" />
+                    <p>(TODO:insérer photo groupe !)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="help">
+            <div class="grid__title">
+                <h1>Comment nous aider ?</h1>
+            </div>
+            <div class="grid__pages">
+                <div class="grid__page">
+                    <h2>Pourquoi nous aider ?</h2>
+                    <p>
+                        En soutenant Kinderhilfe, les donateurs peuvent contribuer à améliorer les conditions de vie des orphelins et des enfants en situation précaire à l'orphelinat Dar Al Atfal.
+                        <br />
+                        En soutenant Kinderhilfe, vous contribuez à améliorer les conditions de vie des enfants les plus vulnérables et à leur offrir une meilleure chance de réaliser leur potentiel.
+                    </p>
+                </div>
+                <div class="grid__page">
+                    <h2>Projet Bêta</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, expedita facere perferendis consectetur numquam placeat voluptas repellendus fugit corporis. Similique
+                        necessitatibus, dolorum veritatis ducimus vel officiis tempora sapiente modi unde, eveniet error molestiae quaerat! Dolor ducimus totam laborum eligendi veritatis. Sunt, beatae
+                        fugiat quae culpa vitae omnis nulla nam? Similique.
+                    </p>
+                </div>
+                <div class="grid__page">
+                    <h2>Projet Omega</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, expedita facere perferendis consectetur numquam placeat voluptas repellendus fugit corporis. Similique
+                        necessitatibus, dolorum veritatis ducimus vel officiis tempora sapiente modi unde, eveniet error molestiae quaerat! Dolor ducimus totam laborum eligendi veritatis. Sunt, beatae
+                        fugiat quae culpa vitae omnis nulla nam? Similique.
+                    </p>
+                </div>
+                <div class="grid__page">
+                    <h2>Projet Zêta</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, expedita facere perferendis consectetur numquam placeat voluptas repellendus fugit corporis. Similique
+                        necessitatibus, dolorum veritatis ducimus vel officiis tempora sapiente modi unde, eveniet error molestiae quaerat! Dolor ducimus totam laborum eligendi veritatis. Sunt, beatae
+                        fugiat quae culpa vitae omnis nulla nam? Similique.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section aria-label="nos projets en photos" class="gallery" id="gallery">
+            <h2>Nos projets en photos</h2>
+            <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev">&#8249;</button>
+                <button class="carousel-button next" data-carousel-button="next">&#8250;</button>
+                <ul data-slides>
+                    <li class="slide" data-active>
+                        <img src="assets/pmrecreatif.jpg" alt="" />
+                        <p>Un après-midi récréatif lors de l'an dernier. Qu'ils se sont amusés !</p>
+                    </li>
+                    <li class="slide">
+                        <img src="assets/librairie.jpg" alt="" />
+                    </li>
+                    <li class="slide">
+                        <img src="assets/foot.jpg" alt="" />
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="contact" id="contact">
+                ajouter infos contact ici
+                <!-- <form onsubmit="sendEmail(); reset(); return false;">
+                    <label for="name">NOM <em>&#x2a;</em></label>
+                    <input id="name" name="name" required type="text" />
+
+                    <label for="email">EMAIL <em>&#x2a;</em></label>
+                    <input id="email" name="email" required type="email" />
+
+                    <label for="phone">TÉLÉPHONE</label>
+                    <input id="phone" name="phone" pattern="[0-9]{10}" type="tel" />
+
+                    <label for="school">ÉTABLISSEMENT</label>
+                    <input id="school" name="school" type="text" />
+
+                    <label for="message">VOTRE MESSAGE<em>&#x2a;</em></label>
+                    <textarea id="message" name="message" required rows="4"></textarea>
+
+                    <h3>N'hésitez pas à nous contacter pour ça, cela ainsi que cette chose.</h3>
+                    <button type="submit" id="senderOrder">SUBMIT</button>
+                </form> -->
+            </div>
+        </footer>
+    </body>
+</html>

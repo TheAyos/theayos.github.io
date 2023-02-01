@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* background-color: #24242a; */
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 300vh;
+    font-family: "Poppins", sans-serif;
+}
+
+::selection {
+    background: var(--color-select);
+}

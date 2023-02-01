@@ -1,0 +1,87 @@
+.contact {
+    padding: 50px 100px;
+    background: #f8f4e5;
+    border-top: 10px solid #f45702;
+}
+
+.contact label,
+.contact input,
+.contact textarea {
+    display: block;
+    width: 100%;
+    font-family: "Poppins";
+    font-size: 16pt;
+    font-weight: 400;
+    line-height: 24pt;
+}
+
+.contact input {
+    margin-bottom: 24pt;
+}
+
+.contact h3 {
+    margin: 0 0 0.5em 0;
+    font-size: 10pt;
+    line-height: 24pt;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.contact span {
+    font-size: 8pt;
+}
+
+.contact em {
+    color: #f45702;
+    font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background: #f8f4e5;
+    padding-left: 5px;
+    outline: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border: 1px solid #6bd4b1;
+}
+
+.contact textarea {
+    resize: none;
+}
+
+.contact button {
+    display: block;
+    padding: 0 20px;
+    border: none;
+    line-height: 24pt;
+    color: white;
+    background: #f45702;
+    transition: 0.2s all ease-in-out;
+    float: right;
+    letter-spacing: 2px;
+    border-bottom: 2px solid transparent;
+    outline: none;
+}
+.contact button:hover {
+    color: #f45702;
+    background: inherit;
+    border-bottom: 2px solid #f45702;
+}
+
+.contact input:-webkit-autofill,
+.contact input:-webkit-autofill:hover,
+.contact input:-webkit-autofill:focus,
+.contact textarea:-webkit-autofill,
+.contact textarea:-webkit-autofill:hover,
+.contact textarea:-webkit-autofill:focus {
+    border: 1px solid #6bd4b1;
+    -webkit-text-fill-color: #2a293e;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+}
