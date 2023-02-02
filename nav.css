@@ -1,4 +1,6 @@
 .nav__container {
+    padding-right: var(--scrollbar-width);
+    height: var(--nav-height);
     display: flex;
     position: fixed;
     top: 0;
@@ -13,7 +15,7 @@
 .nav__container button {
     text-decoration: none;
     font-family: "Poppins", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     color: #fff;
     font-weight: 500;
 }
@@ -22,10 +24,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: var(--nav-height);
+    min-height: var(--nav-height);
+    margin-right: auto;
 }
 .logo__container img {
-    height: var(--nav-height);
-    margin: 0 20px;
+    height: 100%;
+    /* margin: 0 20px 0 0; */
+    /*proper text distance */
     transition: transform 0.5s ease;
     cursor: pointer;
 }
@@ -34,16 +40,29 @@
 }
 .logo__container .name {
     font-family: "Great Vibes", sans-serif;
-    font-size: 36px;
-    margin-right: auto;
+    font-size: 2.3rem;
     transition: all 300ms ease;
 }
+.logo__container .name::after {
+    content: "Kinderhilfe";
+}
 .logo__container .name:hover {
-    color: #000;
+    color: var(--color-green);
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.8);
+}
+@media screen and (max-width: 500px) {
+    .logo__container img {
+        height: 75px;
+    }
+    .logo__container .name::after {
+        content: "Kinderhilfe";
+    }
 }
 
 .nav__links {
-    padding: 0 20px;
+    /* padding: 0 1.2rem; */
+    width: 8rem;
+    text-align: center;
     line-height: var(--nav-height);
     transition: all 0.3s ease;
 }
@@ -63,20 +82,33 @@
     color: var(--color-magenta);
 }
 
-.nav__container .cta {
-    padding: 0 25px;
-}
 .nav__container button {
     padding: 9px 25px;
     border: none;
     border-radius: 50px;
     background-color: rgb(39, 182, 221);
     transition: all 0.3s ease;
-    /* margin-left: 30px; */
     cursor: pointer;
+    font-size: 0;
+}
+.nav__container button::after {
+    font-size: 1rem;
+    content: "Contact";
 }
 .nav__container button:hover {
     background-color: rgba(39, 182, 221, 0.8);
+}
+@media screen and (max-width: 500px) {
+    .nav__container button::after {
+        font-size: 0;
+    }
+    .nav__container button {
+        font-size: 1rem;
+        padding: 9px 15px;
+    }
+    .cta {
+        width: 70px;
+    }
 }
 
 .nav__container .icon {
@@ -87,35 +119,34 @@
     display: flex;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1050px) {
     .nav__container > :not(.responsive__special__placement) {
         display: none;
     }
     .nav__container a.icon {
         display: block;
     }
-    .nav__container a.cta {
-        margin-left: auto;
-    }
 
     .nav__container.responsive {
         flex-direction: column;
-        text-align: left;
         align-items: flex-start;
-        justify-content: left;
     }
     .nav__container.responsive .nav__links:not(.responsive__special__placement) {
         width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
         font-size: 20px;
         line-height: 200%;
         padding-left: 2rem;
     }
-    .nav__container.responsive .icon__container {
-        position: absolute;
-        right: 0;
-        top: 0;
+    .nav__container.responsive .nav__links:hover {
+        background-color: rgba(0, 0, 0, 0.3);
     }
     .nav__container.responsive a {
         display: block;
+    }
+    .nav__container.responsive .icon__container {
+        position: absolute;
+        top: 0;
+        right: var(--scrollbar-width);
     }
 }

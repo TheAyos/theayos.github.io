@@ -9,13 +9,13 @@
     }
 } */
 
-section {
+.pages section {
     display: flex;
     width: 100vw;
     height: calc(var(--about-pages-count) - 1);
     flex-direction: row;
 }
-section.help {
+.pages section:nth-child(2n) {
     flex-direction: row-reverse;
 }
 
