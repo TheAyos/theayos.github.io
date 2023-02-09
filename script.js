@@ -26,19 +26,71 @@ buttons.forEach((b) => {
     });
 });
 
-$(".brand-carousel").owlCarousel({
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    responsive: {
-        0: {
-            items: 1,
+/* Owl Carousel 2 All Settings. See the bottom for how to use equal heights with matchHeight  plugin */
+
+jQuery(document).ready(function ($) {
+    var owl = $(".brand-carousel");
+
+    owl.owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
+        items: 3,
+        loop: true,
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
+        margin: 0,
+        stagePadding: 0,
+        merge: false,
+        mergeFit: true,
+        autoWidth: false,
+        startPosition: 0,
+        smartSpeed: 250,
+        fluidSpeed: false,
+        dragEndSpeed: false,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            480: {
+                items: 2,
+            },
+            768: {
+                items: 3,
+            },
+            992: {
+                items: 4,
+            },
         },
-        600: {
-            items: 3,
-        },
-        1000: {
-            items: 5,
-        },
-    },
+        lazyLoad: true,
+        responsiveRefreshRate: 200,
+        responsiveBaseElement: window,
+        fallbackEasing: "swing",
+        info: false,
+        nestedItemSelector: false,
+        itemElement: "div",
+        stageElement: "div",
+        refreshClass: "owl-refresh",
+        loadedClass: "owl-loaded",
+        loadingClass: "owl-loading",
+        rtlClass: "owl-rtl",
+        responsiveClass: "owl-responsive",
+        dragClass: "owl-drag",
+        itemClass: "owl-item",
+        stageClass: "owl-stage",
+        stageOuterClass: "owl-stage-outer",
+        grabClass: "owl-grab",
+        autoHeight: false,
+    });
+
+    $(".next").click(function () {
+        owl.trigger("owl.next");
+    });
+    $(".prev").click(function () {
+        owl.trigger("owl.prev");
+    });
+
+    /* Equal Heights using javascript */
+    // $('.latest-blog-posts .thumbnail.item').matchHeight();
 });

@@ -20,8 +20,7 @@
     height: 0%;
     background: rgb(82, 200, 232);
     background: linear-gradient(300deg, rgba(82, 200, 232, 1) 00%, rgba(91, 239, 17, 1) 33%, rgba(241, 122, 34, 1) 66%, rgba(250, 20, 151, 1) 100%);
-    border-top-left-radius: 180px;
-    border-bottom-left-radius: 180px;
+    border-radius: 180px;
     z-index: 10000;
 }
 
@@ -33,6 +32,7 @@
     right: 0;
     background: rgb(82, 200, 232);
     background: linear-gradient(300deg, rgba(82, 200, 232, 1) 00%, rgba(91, 239, 17, 1) 33%, rgba(241, 122, 34, 1) 66%, rgba(250, 20, 151, 1) 100%);
+    -webkit-filter: blur(6px);
     filter: blur(6px);
 
     width: inherit;

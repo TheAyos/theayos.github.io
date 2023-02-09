@@ -21,11 +21,18 @@ html {
 body {
     width: 100vw;
     margin-right: var(--scrollbar-width);
-    /* height: 300vh; */
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+}
+
+::-moz-selection {
+    background: var(--color-select);
 }
 
 ::selection {
     background: var(--color-select);
 }
+

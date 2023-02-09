@@ -20,18 +20,21 @@
 header {
     display: flex;
     width: 100%;
-    height: 100vh;
-    min-height: 900px;
+    min-height: 100vh;
     /* justify-content: space-evenly; */
-    padding-top: 6rem;
+    padding-top: 7.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding-right: var(--scrollbar-width);
+    row-gap: 3rem;
 }
 header h1 {
-    display: inline-block;
-    font-size: 2.5rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     text-align: center;
+    font-size: 2.5rem;
     color: #fff;
     text-shadow: 3px 5px 0 rgba(0, 0, 0, 0.3);
     border-bottom: 4px dashed var(--color-orange);
@@ -39,9 +42,23 @@ header h1 {
 header h1 span {
     font-family: "Great Vibes", sans-serif;
 }
+.title__fix {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.title__fix h1:last-child {
+    margin-left: 4px;
+}
+@media screen and (max-width: 700px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+
 header p {
-    max-width: 80%;
-        /* margin: 3rem; */
+    /* margin: 3rem; */
     padding: 0.5rem 1rem;
     border: 6px dotted var(--color-select);
     border-radius: 20px;
@@ -51,6 +68,7 @@ header p {
     line-height: calc(1.5em + 0.2vw);
     color: whitesmoke;
     background-color: rgba(0, 0, 0, 0.39);
+    max-width: 80%;
     word-spacing: 2px;
 }
 
@@ -67,7 +85,7 @@ header div.backdrop {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     z-index: -1;
 }
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
@@ -88,7 +106,9 @@ header video {
     z-index: -100;
     box-shadow: none;
     outline: none;
+    -o-object-fit: cover;
     object-fit: cover;
+    -o-object-position: center;
     object-position: center;
     overflow: hidden;
 }
@@ -101,7 +121,9 @@ header video {
 @media (max-aspect-ratio: 16/9) {
     header video {
         width: auto;
-        height: 100%;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
     }
 }
 @media (max-width: 700px) {
