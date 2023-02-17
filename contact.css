@@ -27,8 +27,13 @@
     font-style: italic;
 }
 
-.contact span {
-    font-size: 8pt;
+.contact span:nth-child(odd) {
+    /* font-size: 8pt; */
+    text-decoration: underline wavy #f45702 2px;
+}
+.contact span:nth-child(even) {
+    /* font-size: 8pt; */
+    text-decoration: underline wavy #6bd4b1 2px;
 }
 
 .contact em {
