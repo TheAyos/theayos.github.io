@@ -21,7 +21,6 @@
 
 section .grid__title {
     display: flex;
-
     position: sticky;
     top: 0;
     width: 50%;
@@ -32,6 +31,7 @@ section .grid__title {
     text-shadow: 3px 3px 0px var(--color-green), 6px 6px 0px var(--color-blue);
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 section#help .grid__title {
     color: var(--color-magenta);
@@ -41,6 +41,12 @@ section h1 {
     padding: 0.3rem 0.6rem;
     font-size: 3rem;
     background-color: whitesmoke;
+}
+
+@media screen and (max-width:500px) {
+    section h1 {
+        font-size: 2.2rem;
+    }
 }
 
 section .grid__pages {
@@ -57,7 +63,7 @@ section .grid__pages {
 .grid__page p {
     width: 80%;
     text-align: justify;
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 30px;
 }
 .grid__page p span {
@@ -82,4 +88,23 @@ section .grid__pages {
 }
 .grid__pages .grid__page:nth-child(4) {
     background-color: var(--color-magenta);
+}
+
+@media screen and (max-width:800px)  {
+    #TODO fix texte
+    .grid_page p {
+        font-size: 1.2rem;
+    }
+    .pages section:nth-child(n) {
+        flex-direction: column;
+    }
+    section .grid__title {
+        position: relative;
+        width: 100%;
+        height: 10rem;
+    }
+    section .grid__pages {
+        width: 100%;
+        background: #000;
+    }
 }

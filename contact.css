@@ -1,7 +1,9 @@
 .contact {
-    padding: 50px 100px;
+    padding: 50px 4rem;
     background: #f8f4e5;
     border-top: 10px solid #f45702;
+    width: 85%;
+    text-align: justify;
 }
 
 .contact label,
@@ -29,7 +31,7 @@
 
 .contact span:nth-child(odd) {
     /* font-size: 8pt; */
-    text-decoration: underline wavy #f45702 2px;
+    text-decoration: underline wavy rgba(245, 87, 3, 0.8) 2px;
 }
 .contact span:nth-child(even) {
     /* font-size: 8pt; */
