@@ -1,14 +1,3 @@
-/* @media (min-width: 600px) {
-    .grid__page {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (min-width: 900px) {
-    .grid__page {
-        grid-template-columns: repeat(4, 1fr);
-    }
-} */
-
 .pages section {
     display: flex;
     width: 100vw;
@@ -31,7 +20,6 @@ section .grid__title {
     text-shadow: 3px 3px 0px var(--color-green), 6px 6px 0px var(--color-blue);
     justify-content: center;
     align-items: center;
-    padding: 1rem;
 }
 section#help .grid__title {
     color: var(--color-magenta);
@@ -41,12 +29,6 @@ section h1 {
     padding: 0.3rem 0.6rem;
     font-size: 3rem;
     background-color: whitesmoke;
-}
-
-@media screen and (max-width:500px) {
-    section h1 {
-        font-size: 2.2rem;
-    }
 }
 
 section .grid__pages {
@@ -63,7 +45,8 @@ section .grid__pages {
 .grid__page p {
     width: 80%;
     text-align: justify;
-    font-size: 1rem;
+    font-size: 18px;
+    font-size: calc(16px + (18 - 14) * (100vw - 300px) / (1600 - 300));
     line-height: 30px;
 }
 .grid__page p span {
@@ -90,21 +73,33 @@ section .grid__pages {
     background-color: var(--color-magenta);
 }
 
-@media screen and (max-width:800px)  {
-    #TODO fix texte
-    .grid_page p {
-        font-size: 1.2rem;
-    }
-    .pages section:nth-child(n) {
+.grid__page .yt-embed {
+    position: relative;
+    height: 0;
+    width: 80%;
+    padding-bottom: calc(0.5625*80%); /* height / width */
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.grid__page .yt-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .pages section, .pages section:nth-child(2n) {
         flex-direction: column;
     }
     section .grid__title {
-        position: relative;
         width: 100%;
-        height: 10rem;
+        padding: 1.6rem;
+        height: auto;
     }
     section .grid__pages {
         width: 100%;
-        background: #000;
     }
 }

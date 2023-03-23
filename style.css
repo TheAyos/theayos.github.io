@@ -74,8 +74,7 @@ header p {
 
 footer {
     display: flex;
-    min-height: 100vh;
-    padding: 3rem 0;
+    height: 100vh;
     background-color: bisque;
     justify-content: center;
     align-items: center;
@@ -86,11 +85,12 @@ header div.backdrop {
     top: 0;
     left: 0;
     width: 100%;
-    height: fit-content;
+    height: 100%;
     z-index: -1;
 }
 @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     header div.backdrop {
+        transform: translate3d(0, 0, 0);
         -webkit-backdrop-filter: blur(var(--banner_video_blur));
         backdrop-filter: blur(var(--banner_video_blur));
     }
