@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap&text=byyoubyoub|2020Clickonred,heislookingkindasus");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffde2a;
+  overflow-x: hidden;
+}
+
+svg {
+  width: 0;
+  height: 0;
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.infotext {
+  margin: 1.5rem 0;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-size: calc(2rem + 2.5vw);
+  z-index: 1;
+  word-wrap: break-word;
+}
+
+.player,
+.player::after,
+.back,
+.back::before,
+.legs,
+.legs::before {
+  transition: background .2s linear;
+}

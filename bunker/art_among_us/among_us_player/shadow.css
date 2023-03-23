@@ -1,0 +1,9 @@
+.shadow {
+  background: rgba(55, 59, 60, 0.6);
+  position: relative;
+  width: 135%;
+  height: 16%;
+  border-radius: 50%;
+  top: 75%;
+  right: 20%;
+}

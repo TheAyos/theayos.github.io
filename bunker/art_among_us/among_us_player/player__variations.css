@@ -1,0 +1,53 @@
+.player__lightgreen {
+  background: #00a53a;
+}
+.player__lightgreen::after {
+  background: #44e921;
+}
+.player__lightgreen .legs,
+.player__lightgreen .legs::before {
+  background: #00a53a;
+}
+.player__lightgreen .back {
+  background: #44e921;
+}
+.player__lightgreen .back::before {
+  background: #00a53a;
+}
+
+/* CHOOSE WICH COLOR TO KEEP */
+.player__violet {
+  background: #3a0e7d;
+}
+.player__violet::after {
+  background: #6c26be;
+}
+.player__violet .legs,
+.player__violet .legs::before {
+  background: #3a0e7d;
+}
+.player__violet .back {
+  background: #6c26be;
+}
+.player__violet .back::before {
+  background: #3a0e7d;
+}
+
+.player__violet {
+  background: #45088e;
+}
+.player__violet::after {
+  background: #8a0dd2;
+}
+.player__violet .legs,
+.player__violet .legs::before {
+  background: #45088e;
+}
+.player__violet .back {
+  background: #8a0dd2;
+}
+.player__violet .back::before {
+  background: #45088e;
+}
+
+/* CHOOSE WICH COLOR TO KEEP */

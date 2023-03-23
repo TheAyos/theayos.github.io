@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+}
+
+h2 {
+    font-size: calc(2.5rem + 3vw);
+    font-family: 'Jua', cursive;
+    color: #222;
+    letter-spacing: 7px;
+    cursor: pointer;
+    text-shadow: 1px 1px 0 #fff,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff;
+}
+
+h2 span, h3 span {
+    transition: .5s;
+}
+
+h2:hover span:nth-child(1){
+    margin-right: 10px;
+}
+
+h2:hover span:nth-child(2){
+    margin-right: 0px;
+}
+h2:hover span:nth-child(3){
+    margin-left: 40px;
+}
+
+h2:hover span:nth-child(1), h2:hover span:nth-child(2){
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+    0 0 40px #fff,
+    0 0 80px #fff,
+    0 0 160px #fff;
+}
+
+h2:hover .azz{
+    filter: blur(2px);
+}

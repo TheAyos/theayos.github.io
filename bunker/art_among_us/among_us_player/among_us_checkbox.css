@@ -1,0 +1,73 @@
+.amongmark_container {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  display: block;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.amongmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #b2ddbe;
+  border-radius: 4px;
+  border: 3px solid #455f55;
+}
+
+.amongmark_container input:hover~.amongmark {
+  background-color: #637a6b;
+}
+
+.amongmark_container input:checked~.amongmark {
+  background-color: #b2ddbe;
+}
+
+.amongmark::after,
+.amongmark::before {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.amongmark_container input:checked~.amongmark::after,
+.amongmark_container input:checked~.amongmark::before {
+  display: block;
+  transform: rotate(-45deg);
+}
+
+.amongmark_container input:checked~.amongmark::before {
+  transform: rotate(45deg);
+}
+
+.amongmark_container .amongmark::after {
+  width: 35px;
+  left: 10.5px;
+  bottom: 1px;
+  border: 5px solid #022600;
+  border-top: none;
+  border-radius: 0px 150px 0 20px;
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+}
+
+.amongmark_container .amongmark::before {
+  width: 18px;
+  left: -4px;
+  bottom: 12px;
+  border: 5px solid #022600;
+  border-top: none;
+  border-radius: 20px 0 10px 0;
+  transform-origin: bottom left;
+  transform: rotate(45deg);
+
+}

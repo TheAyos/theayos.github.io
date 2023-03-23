@@ -1,0 +1,20 @@
+{
+  "author": "youbyoub (theayos)",
+  "name": "Fancy Minimalist Clean Tab",
+  "description": "A Fancy Minimalist Tab by youbyoub :D",
+  "version": "1.0",
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png"
+  },
+  "icons": {
+    "128": "img/icon.png",
+    "16": "img/icon.png",
+    "64": "img/icon.png"
+  },
+
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600");
+
+body {
+    background-color: #3a1a33;
+}   
+
+.title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: Montserrat;
+    text-align: center;
+    width: 100%;
+}
+
+.title h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    user-select: none;
+    font-size: 6rem;
+    margin: 0;
+    padding: 0;
+}
+
+.title h1::before {
+    content: "youb";
+    position: relative;
+    color: #fff;
+    font-weight: 100;
+    font-size: inherit;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    text-shadow: 0 0 10px #ff006c,
+     0 0 20px #ff006c,
+     0 0 30px #ff006c,
+     0 0 40px #ff417d,
+     0 0 70px #ff417d,
+     0 0 80px #ff417d,
+     0 0 100px #ff417d,
+     0 0 150px #ff417d;
+    animation: glow 3s infinite ease, write 3s alternate ease-in infinite;
+}
+
+
+
+@keyframes write {
+    0% {
+        content: "youb";
+    }
+    25% {
+        content: "youby";
+    }
+    50% {
+        content: "youbyo";
+    }
+    75% {
+        content: "youbyou";
+    }
+    100% {
+        content: "youbyoub";
+    }
+}
+
+.title h1::after {
+    content: "_";
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    animation: blink 0.5s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+        text-shadow: none;
+    }
+    50% {
+        color: #fff;
+        text-shadow: 0 0 10px #ff006c,
+        0 0 20px #ff006c,
+        0 0 30px #ff006c,
+        0 0 40px #ff417d,
+        0 0 70px #ff417d,
+        0 0 80px #ff417d,
+        0 0 100px #ff417d,
+        0 0 150px #ff417d;
+    }
+  }
+
+  @keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #ff006c,
+     0 0 20px #ff006c,
+     0 0 30px #ff006c,
+     0 0 40px #ff417d,
+     0 0 70px #ff417d,
+     0 0 80px #ff417d,
+     0 0 100px #ff417d,
+     0 0 150px #ff417d;
+    }
+    50% {
+        text-shadow: 0 0 10px #ff006c,
+     0 0 20px #ff006c,
+     0 0 30px #ff006c,
+     0 0 40px #ff417d;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff006c,
+     0 0 20px #ff006c,
+     0 0 30px #ff006c,
+     0 0 40px #ff417d,
+     0 0 70px #ff417d,
+     0 0 80px #ff417d,
+     0 0 100px #ff417d,
+     0 0 150px #ff417d;
+    }
+}

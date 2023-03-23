@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <canvas id="canvas"></canvas>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  </style>
+
+  <script>
+    window.onload = function () {
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      canvas.width = innerWidth;
+      canvas.height = innerHeight;
+
+      //void ctx.arc(x, y, rayon, angleDépart, angleFin, sensAntiHoraire);
+      // x,y: positions du centre de l'arc
+
+      function drawMoon(centerX, centerY, radius) {
+        let x1 = centerX + radius;
+        let y1 = centerY;
+        let x2 = centerX - radius;
+        let y2 = centerY + radius * 2;
+
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0.5 * Math.PI, 1.5 * Math.PI, true);
+        ctx.moveTo(centerX, centerY - radius);
+        ctx.arcTo(x1, y1, x2, y2, dis(x1, y1, x2, y2) / 2);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "rgb(190, 130, 20)";
+        ctx.stroke();
+        ctx.fillStyle = "rgb(244, 216, 116)";
+        ctx.fill();
+        ctx.closePath();
+
+        /*// Start point
+        ctx.beginPath();
+        ctx.fillStyle = "blue";
+        ctx.arc(centerX, centerY - radius, 5, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+
+        // Control points
+        ctx.beginPath();
+        ctx.fillStyle = "red";
+        ctx.arc(x1, y1, 5, 0, 2 * Math.PI); // Control point one
+        ctx.arc(x2, y2, 5, 0, 2 * Math.PI); // Control point two
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "rgb(0,0,0, 0.5)";
+        ctx.stroke();
+        ctx.closePath();*/
+      }
+
+      drawMoon(1000, 300, 250);
+
+      ctx.beginPath();
+      ctx.arc(400, 400, 300, 0.5 * Math.PI, 1.5 * Math.PI, true);
+      ctx.moveTo(400, 100);
+      //ctx.arc(400, 100, 20, 0, 2 * Math.PI, true);
+      ctx.arcTo(1200, 400, 400, 700, ((400 - 100) * dis(400, 100, 1200, 400)) / (1200 - 400));
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = "rgb(190, 130, 20)";
+      ctx.stroke();
+      ctx.fillStyle = "rgb(244, 216, 116)";
+      ctx.fill();
+      ctx.closePath();
+    };
+    function dis(x1, y1, x2, y2) {
+      return Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+    }
+  </script>
+</html>

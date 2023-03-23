@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAVA LAMPS | youbyoub</title>
+    <link rel="stylesheet" href="./byyoubyoub.css" />
+    <link rel="stylesheet" href="./bottle.css" />
+    <link rel="stylesheet" href="./cup.css" />
+    <link rel="stylesheet" href="./lava.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./lava_lamp.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="bottle">
+        <div class="cup top"></div>
+        <div class="lava">
+            <div class="bigball"></div>
+            <div class="bigball"></div>
+            <div class="bigball"></div>
+            <div class="bigball"></div>
+            <div class="blob top"></div>
+            <div class="blob bottom"></div>
+        </div>
+        <div class="cup bottom"></div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                    result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+    <div class="footer">&copy; by youbyoub | 2020</div>
+</body>
+
+</html>

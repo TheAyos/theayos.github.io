@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-color: #495057;
+  --background: #fff;
+  --light-background: #f6f8fb;
+
+  --transparent-bg: rgba(0, 0, 0, 0.15);
+
+  --grad-1-bgcolor: linear-gradient(-45deg, #ff758c, #ff7eb3, #8bccc9, #50c9c3);
+  --grad-2-bgcolor: linear-gradient(-45deg, #667eea, #764ba2, #fcb69f, #ffecd2);
+  --grad-3-bgcolor: linear-gradient(-45deg, #48c6ef, #6f86d6, #13547a, #80d0c7);
+  --grad-4-bgcolor: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+}
+
+body {
+  /* for background */
+  min-height: 80vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+  overflow: hidden;
+}
+
+.grad-1-bg {
+  background: var(--grad-1-bgcolor);
+  background-size: 400% 400%;
+}
+
+.grad-2-bg {
+  background: var(--grad-2-bgcolor);
+  background-size: 400% 400%;
+}
+
+.grad-3-bg {
+  background: var(--grad-3-bgcolor);
+  background-size: 400% 400%;
+}
+
+.grad-4-bg {
+  background: var(--grad-4-bgcolor);
+  background-size: 400% 400%;
+}
+
+@-webkit-keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/** || Begin Middle || */
+
+.middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  padding: 0 2.5vw;
+}
+
+.clock {
+  /* 5rem */
+  font-size: calc(4rem + 2.5vmin);
+  font-weight: 800;
+  /*gets size of its contents*/
+  display: inline-block;
+  letter-spacing: 2px;
+}
+
+.secs {
+  /* to be on the same line as .clock */
+  display: inline-block;
+}
+
+.text {
+  /* 5.5vmin */
+  font-size: calc(0.5rem + 4vmin);
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:active .tooltiptext {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.tooltiptext {
+  display: none;
+  position: fixed;
+  z-index: 1;
+
+  color: var(--font-color);
+  font-weight: 500;
+  font-size: 1.25rem;
+  letter-spacing: 0.75px;
+  text-align: center;
+
+  background-color: #c4eff4;
+  border-radius: 5px;
+  padding: 2.5px 6px;
+}
+
+/** || Finish Middle || */
+
+/** || Begin Options || */
+
+.options-button {
+  position: absolute;
+  right: 25px;
+  /* quite centered */
+  margin-right: -1rem;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  border-radius: 0.36rem;
+  margin-top: 8px;
+
+  cursor: pointer;
+  color: var(--light-background);
+  z-index: 1;
+  background: var(--transparent-bg);
+  transition: 0.25s all;
+}
+
+.options-card {
+  position: absolute;
+  right: 25px;
+  /* quite centered */
+  margin-right: -1rem;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  border-radius: 0.36rem;
+  margin-top: 8px;
+  color: var(--light-background);
+  background: var(--transparent-bg);
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.36rem;
+  gap: 0.12rem 2rem;
+  grid-template-areas:
+    "title title"
+    "grad1 grad3"
+    "grad2 grad4";
+  transform-origin: right top;
+  transform: scale(0);
+  transition: transform 0.5s;
+}
+
+.options-card .grad1 {
+  grid-area: grad1;
+}
+
+.options-card .grad2 {
+  grid-area: grad2;
+}
+
+.options-card .grad3 {
+  grid-area: grad3;
+}
+
+.options-card .grad4 {
+  grid-area: grad4;
+}
+
+.options-card .title {
+  grid-area: title;
+  font-weight: 600;
+  padding: 0 0 12px 0;
+}
+
+.options-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.options-card a:hover {
+  color: #fff;
+  transition: color 0.2s;
+  font-weight: 600;
+}
+
+.options-card .grad1 a:hover {
+  background: var(--grad-1-bgcolor);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.options-card .grad2 a:hover {
+  background: var(--grad-2-bgcolor);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.options-card .grad3 a:hover {
+  background: var(--grad-3-bgcolor);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.options-card .grad4 a:hover {
+  background: var(--grad-4-bgcolor);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.options-card a::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  border-radius: 2px;
+  background-size: 400% 400%;
+  -webkit-animation: gradient 5s linear infinite;
+  animation: gradient 5s linear infinite;
+}
+
+.options-card .grad1 a::after {
+  grid-area: grad1;
+  background: var(--grad-1-bgcolor);
+  background-size: 400% 400%;
+}
+
+.options-card .grad2 a::after {
+  grid-area: grad2;
+  background: var(--grad-2-bgcolor);
+  background-size: 400% 400%;
+}
+
+.options-card .grad3 a::after {
+  grid-area: grad3;
+  background: var(--grad-3-bgcolor);
+  background-size: 400% 400%;
+}
+
+.options-card .grad4 a::after {
+  grid-area: grad4;
+  background: var(--grad-4-bgcolor);
+  background-size: 400% 400%;
+}
+
+/** || Finish Options || */

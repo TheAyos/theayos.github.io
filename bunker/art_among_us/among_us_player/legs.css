@@ -1,0 +1,37 @@
+.legs {
+  height: 50px;
+  width: 60px;
+  background-color: #880933;
+  position: absolute;
+  bottom: -49px;
+  left: -10px;
+  border: 10px solid black;
+  border-top: none;
+  border-radius: 0 0 22px 28px;
+  z-index: 1;
+}
+
+.legs::before {
+  content: "";
+  height: 45px;
+  width: 60px;
+  background-color: #880933;
+  position: absolute;
+  right: -90px;
+  border: 10px solid black;
+  border-top: none;
+  border-radius: 0 0 32px 26px;
+}
+
+.legs::after {
+  content: "";
+  height: 10px;
+  width: 55px;
+  background-color: black;
+  position: absolute;
+  left: 40px;
+  top: -9px;
+  border: 10px solid black;
+  border-top: none;
+  border-radius: 80px 5px 150px 0;
+}

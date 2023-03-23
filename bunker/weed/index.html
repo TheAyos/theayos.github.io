@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>EVERY DAY | Click & hover</title>
+	<link href='http://fonts.googleapis.com/css?family=Bowlby+One+SC' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="./weed.ico">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		function showWhite() {
+			var audio = document.getElementsByTagName("audio")[0];
+			var el = document.getElementById("white");
+			el.classList.add('showFadeIn');
+			el.classList.remove('hideFadeOut');
+			audio.pause();
+		}
+
+		function hideWhite() {
+			var audio = document.getElementsByTagName("audio")[0];
+			audio.addEventListener('ended', function () {
+				this.currentTime = 0;
+			}, false); //resets audio when it ends
+			var el = document.getElementById("white");
+			el.classList.add('hideFadeOut');
+			el.classList.remove('showFadeIn');
+			audio.play();
+		}
+	</script>
+</head>
+
+<body>
+	<div class="container"></div>
+	<div class="white" id="white"></div>
+	<a class="type" onmouseover="hideWhite();" onmouseout="showWhite();">WEED'</a>
+	<audio class="weed" preload loop>
+		<source src="shooting-stars.m4a">
+	</audio>
+</body>
+
+</html>

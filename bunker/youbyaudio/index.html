@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDIO VISUALIZER | youbyoub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--<script src="https://spotify-player.herokuapp.com/spotify-player.js"></script>-->
+    <script>
+        /*var spotifyPlayer = new SpotifyPlayer();
+
+        spotifyPlayer.on('update', response => {
+            // render the track received
+        });
+
+        spotifyPlayer.on('login', user => {
+            if (user === null) {
+                // no user
+            } else {
+                // say hello to the user, and tell them to play something!
+            }
+        });
+
+        spotifyPlayer.init();
+
+        spotifyPlayer.login();*/
+    </script>
+
+    <div class="cover"></div>
+    <canvas id="fancy-audio" width="400" height="400"></canvas>
+    <video controls="" autoplay="" id="source">
+        <!--<source src="stellarashes.mp3" type="audio/mpeg">-->
+        <source src="futureworld.mp3" type="audio/mpeg">
+        <source src="futureworld.ogg" type="audio/ogg">
+    </video>
+    <script src="./fps.js" defer></script>
+    <script src="./script.js" defer></script>
+
+</body>
+
+</html>

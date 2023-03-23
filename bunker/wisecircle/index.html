@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISE | youbyoub</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="./jquery.lettering-0.6.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="circle">
+        <h1>WHAT COMES AROUND GOES AROUND </h1>
+    </div>
+
+    <script defer>
+        $("h1").lettering();
+        var letters = document.querySelector("h1").children;
+        var a = 360 / letters.length;
+        var offset = 1;
+        for (var i = offset; i < letters.length + 1; i++) {
+            var thisOnesAngle = a * i - 30; //deg
+            letters[i - 1].style = `transform: rotate(${thisOnesAngle}deg)`
+            letters[i - 1].style.animationDelay = `${i/7}s`
+        }
+    </script>
+
+</body>
+
+</html>

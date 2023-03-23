@@ -1,0 +1,42 @@
+night mode
+🌙
+☀️
+
+good colors
+	--font-color: #495057;
+	--heading-color: #343a40;
+	--background: #fff;
+	--dark-font-color: #1b1d25;
+	--medium-font-color: #60656c;
+	--light-font-color: #787f87;
+	--light-background: #f6f8fb;
+	--lighter-background: #e6e8eb;
+	--border: #d6d9de;
+	--link-color: #5c7cfa;
+	--link-color-darker: #3b5bdb;
+	--navbar-color: #4c6ef5;
+	--blockquote: #edf2ff;
+	--transparent-text: rgba(0,0,0,0.7);
+	--transparent-bg: rgba(0,0,0,0.15);
+	--code-font-family: Menlo,"Roboto Mono",Courier New,monospace;
+	--code-font-color: #b3b9c5;
+	--code-background-color: #353535;
+	--string: #92d192;
+	--variable: #f2777a;
+	--property: #abb2bf;
+	--number: #fca369;
+	--operator: #ac8d58;
+	--punctuation: #d5d8df;
+	--comment: #848991;
+	--function: #62cfcf;
+	--keyword: #ffeead;
+	--attribute: #ffd479;
+	--class: #e1a6f2;
+	--tag: #6ab0f3;
+	--error: #f2777a;
+
+    */good colors
+    
+	emoooojis 💖💥
+	🌙☀️☄️
+	🧵🍧

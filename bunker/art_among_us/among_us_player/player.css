@@ -1,0 +1,97 @@
+.player {
+  background: #880933;
+  width: 140px;
+  height: 200px;
+  /* funny to play with :) */
+  position: relative;
+  border: 10px solid black;
+  border-bottom: none;
+  border-radius: 60px 80px 0 0;
+  z-index: 1;
+  margin: 1.5rem 2rem 6rem 2rem;
+  -webkit-animation: squiggly-anim 0.9s ease-in-out infinite;
+  animation: squiggly-anim 0.9s ease-in-out infinite;
+  
+}
+
+.player::after {
+  content: "";
+  position: absolute;
+  width: 92%;
+  height: 85%;
+  /* 6/7 */
+  background-color: #f21717;
+  top: 2px;
+  left: 6px;
+  border-radius: 54% 69% 30% 43% / 28% 58% 86% 89%;
+}
+
+@-webkit-keyframes squiggly-anim {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+    filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+    filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+    filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+    filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+    filter: url("#squiggly-4");
+  }
+}
+
+@keyframes squiggly-anim {
+  0% {
+    -webkit-filter: url("#squiggly-0");
+    filter: url("#squiggly-0");
+  }
+  25% {
+    -webkit-filter: url("#squiggly-1");
+    filter: url("#squiggly-1");
+  }
+  50% {
+    -webkit-filter: url("#squiggly-2");
+    filter: url("#squiggly-2");
+  }
+  75% {
+    -webkit-filter: url("#squiggly-3");
+    filter: url("#squiggly-3");
+  }
+  100% {
+    -webkit-filter: url("#squiggly-4");
+    filter: url("#squiggly-4");
+  }
+}
+
+@-webkit-keyframes thatbackfliptho {
+  0%,
+  50% {
+    transform: translateY(0) rotateX(0);
+    transform-origin: 50% 0%;
+  }
+  12% {
+    transform: translateY(-100%) rotateX(-180deg);
+    transform-origin: 50% 100%;
+  }
+}
+
+@keyframes thatbackfliptho {
+  0%,
+  50% {
+    transform: translateY(0) rotateX(0);
+    transform-origin: 50% 0%;
+  }
+  12% {
+    transform: translateY(-100%) rotateX(-180deg);
+    transform-origin: 50% 100%;
+  }
+}

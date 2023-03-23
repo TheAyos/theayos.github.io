@@ -1,0 +1,122 @@
+.glass {
+  background: #235685;
+  position: relative;
+  width: 110px;
+  height: 40%;
+  /* measured */
+  top: 15%;
+  left: 28%;
+  border: 10px solid black;
+  border-radius: 25px 50px 30px 30px;
+  z-index: 2;
+  -webkit-animation: look-left 2s cubic-bezier(.86,0,.07,1) infinite;
+          animation: look-left 2s cubic-bezier(.86,0,.07,1) infinite
+}
+
+/* kinda sus cubic-bezier-(.86,0,.07,1) */
+/* kinda dancy cubic-bezier-(.68,-0.55,.27,1.55) */
+
+.glass::before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 65%;
+  background: #75dbf4;
+  border-radius: 3px 30px 3px 30px;
+  right: 0;
+  -webkit-animation: look-left__before 2s cubic-bezier(.86,0,.07,1) infinite;
+          animation: look-left__before 2s cubic-bezier(.86,0,.07,1) infinite;
+}
+
+.glass::after {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 23%;
+  background: #ffffff;
+  right: 11px;
+  top: 5px;
+  border-radius: 6px 10px;
+  transform: rotate(4deg);
+  -webkit-animation: look-left__after 2s cubic-bezier(.86,0,.07,1) infinite;
+          animation: look-left__after 2s cubic-bezier(.86,0,.07,1) infinite;
+}
+
+@-webkit-keyframes look-left {
+  0%,
+  100% {
+    left: 28%;
+    border-radius: 25px 50px 30px 30px;
+  }
+
+  50% {
+    left: -28%;
+    border-radius: 50px 25px 30px 30px;
+  }
+}
+@keyframes look-left {
+  0%,
+  100% {
+    left: 28%;
+    border-radius: 25px 50px 30px 30px;
+  }
+
+  50% {
+    left: -28%;
+    border-radius: 50px 25px 30px 30px;
+  }
+}
+
+@-webkit-keyframes look-left__before {
+  0%,
+  100% {
+    border-radius: 5px 30px 3px 30px;
+    right: 0;
+  }
+
+  50% {
+    border-radius: 30px 5px 30px 3px;
+    left: 0;
+  }
+}
+@keyframes look-left__before {
+  0%,
+  100% {
+    border-radius: 5px 30px 3px 30px;
+    right: 0;
+  }
+
+  50% {
+    border-radius: 30px 5px 30px 3px;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes look-left__after {
+  0%,
+  100% {
+    right: 11px;
+    border-radius: 6px 10px;
+    transform: rotate(4deg);
+  }
+
+  50% {
+    left: 11px;
+    border-radius: 10px 6px;
+    transform: rotate(-4deg);
+  }
+}
+@keyframes look-left__after {
+  0%,
+  100% {
+    right: 11px;
+    border-radius: 6px 10px;
+    transform: rotate(4deg);
+  }
+
+  50% {
+    left: 11px;
+    border-radius: 10px 6px;
+    transform: rotate(-4deg);
+  }
+}

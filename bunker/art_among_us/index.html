@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMONG US | youbyoub</title>
+    <link rel="stylesheet" href="./byyoubyoub.css">
+    <link rel="stylesheet" href="./among_us_player/among_us_checkbox.css">
+    <link rel="stylesheet" href="./among_us_player/player.css">
+    <link rel="stylesheet" href="./among_us_player/player__variations.css">
+    <link rel="stylesheet" href="./among_us_player/legs.css">
+    <link rel="stylesheet" href="./among_us_player/back.css">
+    <link rel="stylesheet" href="./among_us_player/glass.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./lightgreen_is_sus.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <label class="amongmark_container">
+        <input type="checkbox" name="anim_checkbox" id="anim_checkbox">
+        <span class="amongmark"></span>
+    </label>
+    <div class="center">
+        <div class="infotext">Click on red, he is looking <strong><em>kinda sus</em></strong></div>
+        <div class="player" id="player" style="z-index: 1;">
+            <div class="legs"></div>
+            <div class="back"></div>
+            <div class="glass"></div>
+            <div class="shadow"></div>
+        </div>
+        <div class="player player__lightgreen">
+            <div class="legs"></div>
+            <div class="back"></div>
+            <div class="glass"></div>
+            <div class="shadow"></div>
+        </div>
+        <div class="player player__violet">
+            <div class="legs"></div>
+            <div class="back"></div>
+            <div class="glass"></div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+
+    <svg>
+        <defs>
+            <filter id="squiggly-0">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="1" result="noise" seed="0" />
+                <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+            </filter>
+            <filter id="squiggly-1">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="1" result="noise" seed="1" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+            </filter>
+            <filter id="squiggly-2">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="1" result="noise" seed="2" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+            </filter>
+            <filter id="squiggly-3">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="1" result="noise" seed="3" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+            </filter>
+            <filter id="squiggly-4">
+                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="1" result="noise" seed="4" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+            </filter>
+        </defs>
+    </svg>
+    <div class="footer">&copy; by youbyoub | 2020</div>
+    <script defer src="./script.js"></script>
+</body>
+
+</html>
